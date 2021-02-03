@@ -106,7 +106,16 @@ function filterByNoOfAwardsxTeamxAge(noOfAwards, team, age){
 }
 //Progression 9 - Sort players in descending order of their age
 
+function sortByAge(){
+  return players.sort((a,b)=>(a.age<b.age)? 1 :((a.age>b.age)?-1:0))
+}
 //Progression 10 - Sort players beloging to _____ team in descending order of awards won
+function FilterByTeamxSortByNoOfAwards(Team){
+  let list=players.filter(data=>{
+    return data.team===Team;
+    })
+  return list.sort((a,b)=>(a.awards.length<b.awards.length)? 1 :((a.awards.length>b.awards.length)?-1:0))
+  }
 
 //Challenge 1 - Sort players that have won _______ award _____ times and belong to _______ country in alphabetical order of their names
 
